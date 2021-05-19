@@ -1,3 +1,7 @@
+body {
+	background-color: whitesmoke;
+}
+
 .lds-spinner {
 	color: #212529;
 	display: inline-block;
@@ -82,4 +86,21 @@
 .img-small {
 	height: 300px;
 	width: 200px;
+}
+
+/* movie page styles */
+
+.label {
+	font-size: 1.2rem;
+	font-weight: 600;
+	align-self: flex-start;
+}
+
+.details-container {
+	display: grid;
+	align-content: flex-start;
+	align-items: center;
+	width: 60vw;
+	gap: 1rem;
+	grid-template-columns: auto auto;
 }
