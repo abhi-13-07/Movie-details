@@ -10,9 +10,9 @@ const Input = () => {
 	};
 
 	return (
-		<div style={{ width: '500px', margin: 'auto' }}>
-			<h2 className="m-3">Search Movie</h2>
-			<div className="form-group m-3">
+		<div style={{ width: '500px', margin: 'auto' }} className="bg-white p-3">
+			<h2 className="mx-3">Search Movie</h2>
+			<div className="form-group mx-3">
 				<label htmlFor="">Movie Name</label>
 				<input
 					type="text"
@@ -20,6 +20,7 @@ const Input = () => {
 					className="form-control"
 					value={queryParams.s}
 					onChange={handleChange}
+					autoComplete="off"
 				/>
 			</div>
 			<div className="form-group m-3">
@@ -30,6 +31,7 @@ const Input = () => {
 					className="form-control"
 					value={queryParams.y}
 					onChange={handleChange}
+					autoComplete="off"
 				/>
 			</div>
 		</div>

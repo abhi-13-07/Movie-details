@@ -22,43 +22,33 @@ const MoviePage = () => {
 				<Spinner />
 			) : (
 				!error && (
-					<div className="bg-white">
+					<div className="bg-white p-3">
 						<div className="row">
 							<div className="col-lg-3">
 								<img src={data?.Poster} alt="" />
 							</div>
 							<div className="col-lg-3">
-								<div className="d-flex flex-column">
-									<span>
-										<strong>Name:</strong> {data?.Title}
-									</span>
-									<span>
-										<strong>Year:</strong> {data?.Year}
-									</span>
-									<span>
-										<strong>Runtime:</strong> {data?.Runtime}
-									</span>
-									<span>
-										<strong>Director:</strong> {data?.Director}
-									</span>
-									<span>
-										<strong>Writer:</strong> {data?.Writer}
-									</span>
-									<span>
-										<strong>Actors:</strong> {data?.Actors}
-									</span>
-									<span>
-										<strong>Plot:</strong> {data?.Plot}
-									</span>
-									<span>
-										<strong>Language:</strong> {data?.Language}
-									</span>
-									<span>
-										<strong>Country:</strong> {data?.Country}
-									</span>
-									<span>
-										<strong>IMDb Rating:</strong> {data?.imdbRating}
-									</span>
+								<div className=" details-container">
+									<div className="label">Name: </div>
+									<div>{data?.Title}</div>
+									<div className="label">Year: </div>
+									<div>{data?.Year}</div>
+									<div className="label">Runtime: </div>
+									<div>{data?.Runtime}</div>
+									<div className="label">Director: </div>
+									<div>{data?.Director}</div>
+									<div className="label">Writer: </div>
+									<div>{data?.Writer}</div>
+									<div className="label">Actors: </div>
+									<div>{data?.Actors}</div>
+									<div className="label">Plot: </div>
+									<div>{data?.Plot}</div>
+									<div className="label">Language: </div>
+									<div>{data?.Language}</div>
+									<div className="label">Country: </div>
+									<div>{data?.Country}</div>
+									<div className="label">IMDb Rating: </div>
+									<div>{data?.imdbRating}</div>
 								</div>
 							</div>
 						</div>
@@ -68,5 +58,18 @@ const MoviePage = () => {
 		</div>
 	);
 };
+
+/*
+						<div class="book-details-container">
+    <div class="label">Author:</div>
+    <div><%= book.author.name %></div>
+    <div class="label">Published on:</div>
+    <div><%= new Date(book.publishedAt).toDateString() %></div>
+    <p class="label">Description:</p>
+    <div><%= book.description %></div>
+    <div class="label">Pages:</div>
+    <div><%= book.noOfPages%></div>
+  </div>
+					*/
 
 export default MoviePage;

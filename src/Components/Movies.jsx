@@ -11,7 +11,7 @@ const Movies = () => {
 	return (
 		<section className="mt-5">
 			<p className="text-center">Search Results</p>
-			<div className="row">
+			<div className="row bg-white p-3">
 				{loading && <Spinner />}
 				{canRender ? (
 					data.Search.map((movie, index) => (
