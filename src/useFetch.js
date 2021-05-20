@@ -21,6 +21,9 @@ const useFetch = (url, queryParams) => {
 						...queryParams,
 					},
 				});
+				if (data?.Response !== 'True') {
+					setError(true);
+				}
 				setData(data);
 				setLoading(false);
 			} catch (err) {
@@ -35,6 +38,7 @@ const useFetch = (url, queryParams) => {
 
 		return () => {
 			setLoading(true);
+			setError(false);
 			source.cancel();
 		};
 	}, [url, queryParams]);

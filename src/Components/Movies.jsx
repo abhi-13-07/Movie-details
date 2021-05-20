@@ -6,6 +6,7 @@ import Spinner from './Spinner';
 const Movies = () => {
 	const { movies } = useContext(MovieContext);
 	const { data, loading, error } = movies;
+	console.log(data);
 	const canRender = !loading && !error && data?.Search?.length > 0;
 
 	return (
